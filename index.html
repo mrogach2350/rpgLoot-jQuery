@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+    <!-- jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>    
+
+    <!-- Local -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">rpgLoot</a>
+        </nav>
+        <div class="row">
+            <div class="col-sm-8">
+                <table id="weaponsTable" class="table display">
+                    <thead>
+                        <tr>
+                            <th scoper="col">Delete</th>
+                            <th data-value="name" scope="col">Name</th>
+                            <th data-value="cost" scope="col">Cost</th>
+                            <th data-value="weight" scope="col">Weight</th>
+                            <th data-value="damageSmall" scope="col">Damage Small</th>
+                            <th data-value="damageMedium" scope="col">Damage Medium</th>
+                            <th data-value="damageType" scope="col">Damage Type</th>
+                            <th data-value="crit" scope="col">Crit</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+    
+            <div class="col-sm-4">
+                <h3>Weapon</h3>
+                <form id="weaponForm">
+                    <div class="form-group">
+                        <label for="weaponName">Name</label>
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="weaponCost">Cost</label>
+                        <input name="cost" type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="weaponWeight">Weight</label>
+                        <input name="weight" type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="damageSmall">Damage (S)</label>
+                        <input name="damageSmall" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="damageMedium">Damage (M)</label>
+                        <input name="damageMedium" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="damageType">Damage Type</label>
+                        <input name="damageType" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="crit">Crit</label>
+                        <input name="crit" type="text" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="weaponSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
