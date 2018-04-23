@@ -39,10 +39,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                    <a class="nav-link" href="weapons.html">Weapons<span class="sr-only">(current)</span></a>
+                     <a class="nav-link" href="index.html">All Items<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="armor.html">Armor</a>
+                     <a class="nav-link" href="armor.html">Armor</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
@@ -54,8 +54,7 @@
             </div>                
         </nav>
         <div class="row">
-            <div class="col-sm-12">
-                <h3>Weapons</h3>
+            <div class="col-sm-8">
                 <table id="weaponsTable" class="table display">
                     <thead>
                         <tr>
@@ -72,27 +71,42 @@
                     <tbody></tbody>
                 </table>
             </div>
-        </div>
-        <div class="row">
-                <div class="col-sm-12">
-                    <h3>Armor</h3>
-                    <table id="weaponsTable" class="table display">
-                        <thead>
-                            <tr>
-                                <th scoper="col">Delete</th>
-                                <th data-value="name" scope="col">Name</th>
-                                <th data-value="cost" scope="col">Cost</th>
-                                <th data-value="weight" scope="col">Weight</th>
-                                <th data-value="damageSmall" scope="col">Damage Small</th>
-                                <th data-value="damageMedium" scope="col">Damage Medium</th>
-                                <th data-value="damageType" scope="col">Damage Type</th>
-                                <th data-value="crit" scope="col">Crit</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
+    
+            <div class="col-sm-4">
+                <h3>Weapon</h3>
+                <form id="weaponForm">
+                    <div class="form-group">
+                        <label for="weaponName">Name</label>
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="weaponCost">Cost</label>
+                        <input name="cost" type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="weaponWeight">Weight</label>
+                        <input name="weight" type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="damageSmall">Damage (S)</label>
+                        <input name="damageSmall" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="damageMedium">Damage (M)</label>
+                        <input name="damageMedium" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="damageType">Damage Type</label>
+                        <input name="damageType" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="crit">Crit</label>
+                        <input name="crit" type="text" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="weaponSubmit">Submit</button>
+                </form>
             </div>
+        </div>
     </div>
     
 </body>
